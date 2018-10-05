@@ -13,7 +13,6 @@ app.use(bodyParser.json());
 // =================================
 // Logging and Setting up Bodyparser
 // =================================
-app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.text());
@@ -37,7 +36,7 @@ require('./controllers/apiRoutes')(app);
 require('./controllers/clientSheetRoutes')(app);
 
 
-const PORT = process.env.PORT || 1234
+const PORT = process.env.PORT || 3306
 app.listen(PORT, function() {
     console.log(`Server Running on Port: ${PORT}`)
 });
